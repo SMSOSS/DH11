@@ -6,8 +6,10 @@
 #define smokePin    5  // define smoke sensor pin
 #define debugMode   0  // define debug mode  
 dht DHT;  // sensor pin S to pin11
+
 int temp = 65536; // initialize temperature value to zero
-int smoke;
+int smoke; // smoke val uses integer
+int smokeThres = 300; // smoke level threshold. depends on situation + sensor. tune later.
 
 void setup() {
   Serial.begin(9600); // label 9600 baud
@@ -23,7 +25,7 @@ void loop() {
    } // finish device setup
 
   // real bug trigger
-  if (DHT.temperature > (temp + 3) && (analogRead(smokePin) > 300 ){
+  if (DHT.temperature > (temp + 3) && (analogRead(smokePin) > smokeThres){
     Serial.println("[WARN] Potential fire detected");
     Serial.print("Current temperature: ");
     Serial.println(DHT.temperature);

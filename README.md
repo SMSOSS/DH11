@@ -18,3 +18,5 @@ This branch is a development branch. If you want the stable branch, check the st
 
 ## Notes ##
 Import The ZIP into Arduino libraries as `dht.h` relies on it.
+
+`smokeThres` can (and should) be finetuned as we are not 100% keen on the sensor's sensitivity yet.
