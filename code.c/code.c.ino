@@ -6,7 +6,8 @@
 
 #define dht_apin   11
 dht DHT;  // sensor pin S to pin11
-int val = 0;
+int temp = 0;
+int hydr = 0;
 void setup() {
   Serial.begin(9600);
 
@@ -15,20 +16,20 @@ void setup() {
 
 void loop() {
   DHT.read11(dht_apin);
-  if (val == DHT.temperature) {
-    Serial.println("No");
-  } else {
-    if (val == 0) {
-    val = DHT.temperature;
-    }
-    else {
-        Serial.println("Change");
-        Serial.print("Temperature = ");
-        Serial.println(DHT.temperature);
-        val = DHT.temperature;
-        }
+  if (temp == 0){
+    temp = DHT.temperature;
+    hydr = DHT.humidity;
+   }
+  if (DHT.temperature > temp && hydr < DHT.humidity){
+    Serial.println("[WARN] Potential fire detected");
+    Serial.print("Current temperature: ");
+    Serial.println(DHT.temperature);
+    Serial.print("Current humidity: ");
+    Serial.println(DHT.humidity);
   }
-
+  else {
+    Serial.println("[INFO] All stable");
+  }
 
   delay(1000);
 }
