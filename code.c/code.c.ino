@@ -21,7 +21,7 @@ void loop() {
     hydr = DHT.humidity;
    }
 
-  if (DHT.temperature > temp){
+  if (DHT.temperature > (temp + 3)){
     Serial.println("[WARN] Potential fire detected");
     Serial.print("Current temperature: ");
     Serial.println(DHT.temperature);
