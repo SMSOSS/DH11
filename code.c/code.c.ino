@@ -4,12 +4,12 @@
 #define dht_apin   11 // define pin node
 #define buzzerPin   8  // define buzzer pin
 #define smokePin    5  // define smoke sensor pin
-#define debugMode   0  // define debug mode  
+#define debugMode   0  // define debug mode
+#define smokeThres  300 // smoke level threshold. depends on situation + sensor. tune later.
 dht DHT;  // sensor pin S to pin11
 
 int temp = 65536; // initialize temperature value to zero
 int smoke; // smoke val uses integer
-int smokeThres = 300; // smoke level threshold. depends on situation + sensor. tune later.
 
 void setup() {
   Serial.begin(9600); // label 9600 baud
