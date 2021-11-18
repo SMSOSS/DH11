@@ -38,7 +38,7 @@ void loop() {
     temp = DHT.temperature;
     if (debugMode == 1) {
         Serial.print("[DEBUG] Current temperature value: ");
-        Serial.println(DHT.temperature);
+        Serial.println(temp);
         Serial.print("[DEBUG] Current smoke value: ");
         Serial.println(smoke);
     }
@@ -48,7 +48,7 @@ void loop() {
     temp = DHT.temperature;
     if (debugMode == 1) {
         Serial.print("[DEBUG] Current temperature value: ");
-        Serial.println(DHT.temperature);
+        Serial.println(temp);
         Serial.print("[DEBUG] Current smoke value: ");
         Serial.println(smoke);
     }
