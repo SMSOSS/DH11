@@ -25,18 +25,18 @@ void loop() {
     Serial.println("[WARN] Potential fire detected");
     Serial.print("Current temperature: ");
     Serial.println(DHT.temperature);
-    Serial.print("Current humidity: ");
-    Serial.println(DHT.humidity);
+//    Serial.print("Current humidity: ");
+//    Serial.println(DHT.humidity);
   }
-  else if (DHT.temperature < temp || DHT.humidity > hydr) {
+  else if (DHT.temperature < temp) {
     Serial.println("[INFO] Updating stored values");
     temp = DHT.temperature;
-    hydr = DHT.humidity;    
+//    hydr = DHT.humidity;    
   }
   else {
     Serial.println("[INFO] All stable");
     temp = DHT.temperature;
-    hydr = DHT.humidity; 
+//    hydr = DHT.humidity; 
   }
 
   delay(1000);
