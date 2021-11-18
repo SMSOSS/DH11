@@ -1,4 +1,4 @@
-﻿# DH11 Driver #
+﻿# noFire - Simple fire detector by Arduino #
 
 ## NOTE ##
 This branch is a development branch. If you want the stable branch, check the stale branch.
