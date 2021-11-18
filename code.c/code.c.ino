@@ -1,5 +1,3 @@
-//for more projects visit:www.blackkeyhole.com
-
 #include <dht.h> // load lib
 
 
