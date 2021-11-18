@@ -1,5 +1,8 @@
 ﻿# DH11 Driver #
 
+## NOTE ##
+This branch is a development branch. If you want the stable branch, check the stale branch.
+
 ## Current status ##
 	✔ Temperature check
 	✔ Humidity check
