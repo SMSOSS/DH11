@@ -15,17 +15,17 @@ void setup() {
 
 void loop() {
   DHT.read11(dht_apin);
-  if (val == DHT.humidity) {
+  if (val == DHT.temperature) {
     Serial.println("No");
   } else {
     if (val == 0) {
-    val = DHT.humidity;
+    val = DHT.temperature;
     }
     else {
         Serial.println("Change");
-        Serial.print("Humidity = ");
-        Serial.println(DHT.humidity);
-        val = DHT.humidity;
+        Serial.print("Temperature = ");
+        Serial.println(DHT.temperature);
+        val = DHT.temperature;
         }
   }
 
