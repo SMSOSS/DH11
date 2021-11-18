@@ -4,7 +4,7 @@
 
 
 
-#define dht_apin   7
+#define dht_apin   11
 dht DHT;  // sensor pin S to pin11
 int val ;
 void setup() {
