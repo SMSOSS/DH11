@@ -15,8 +15,9 @@ void setup() {
 void loop() {
   DHT.read11(dht_apin);
   if (temp == 0){
+    Serial.println("[INFO] Initializing values");
     temp = DHT.temperature;
-    hydr = DHT.humidity;
+//    hydr = DHT.humidity;
    }
 
   if (DHT.temperature > (temp + 3)){
