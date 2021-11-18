@@ -22,6 +22,7 @@ void loop() {
    }
 
   if (DHT.temperature < temp || DHT.humidity > hydr) {
+    Serial.println("[INFO] Updating stored values")
     temp = DHT.temperature;
     hydr = DHT.humidity;    
   }
