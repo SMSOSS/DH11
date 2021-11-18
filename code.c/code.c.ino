@@ -6,9 +6,8 @@
 
 #define dht_apin   11
 dht DHT;  // sensor pin S to pin11
-int val ;
+int val = 0;
 void setup() {
-  val = DHT.humidity;
   Serial.begin(9600);
 
 }
@@ -19,10 +18,15 @@ void loop() {
   if (val == DHT.humidity) {
     Serial.println("No");
   } else {
-    Serial.println("Change");
-    Serial.print("Humidity = ");
-    Serial.println(DHT.humidity);
+    if (val == 0) {
     val = DHT.humidity;
+    }
+    else {
+        Serial.println("Change");
+        Serial.print("Humidity = ");
+        Serial.println(DHT.humidity);
+        val = DHT.humidity;
+        }
   }
 
 
