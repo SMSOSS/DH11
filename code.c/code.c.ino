@@ -35,6 +35,7 @@ void loop() {
   else if (DHT.temperature < temp) { // val update
     Serial.println("[INFO] Updating stored values");
     temp = DHT.temperature;
+    isFire = 0;
     if (debugMode == 1) {
         Serial.print("[DEBUG] Current temperature value: ");
         Serial.println(temp);
