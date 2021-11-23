@@ -1,5 +1,9 @@
 #include <dht.h> // load dht lib
 
+// rain2wood@SMSOSS, import common lib
+#include <stdio.h>
+#include <stdlib.h>
+
 #define dht_apin   11 // define pin node
 #define buzzerPin   8  // define buzzer pin
 #define flamePin    12  // define flame sensor pin
@@ -9,7 +13,7 @@ dht DHT;  // sensor pin S to pin11
 int temp = 65536; // initialize temperature value to zero
 int flame; // flame val uses integer
 int isFire = 0;
-
+    	
 void setup() {
   Serial.begin(9600); // label 9600 baud
 }
