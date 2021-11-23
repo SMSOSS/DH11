@@ -8,6 +8,7 @@ dht DHT;  // sensor pin S to pin11
 
 int temp = 65536; // initialize temperature value to zero
 int flame; // flame val uses integer
+int isFire = 0;
 
 void setup() {
   Serial.begin(9600); // label 9600 baud
@@ -29,6 +30,7 @@ void loop() {
     Serial.println(DHT.temperature);
     Serial.print("Current flame level :");
     Serial.println(flame);
+    isFire = 1;
   }
   else if (DHT.temperature < temp) { // val update
     Serial.println("[INFO] Updating stored values");
