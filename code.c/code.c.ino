@@ -1,5 +1,4 @@
 #include <dht.h> // load dht lib
-#include <Tone.h> // load tone lib
 
 #define dht_apin   11 // define pin node
 #define buzzerPin   8  // define buzzer pin
@@ -30,7 +29,6 @@ void loop() {
     Serial.println(DHT.temperature);
     Serial.print("Current flame level :");
     Serial.println(flame);
-    tone(buzzerPin, 2000, 500); // buzz buzz when fire
   }
   else if (DHT.temperature < temp) { // val update
     Serial.println("[INFO] Updating stored values");
