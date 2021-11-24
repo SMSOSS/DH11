@@ -1,6 +1,8 @@
 ﻿# noFire - Simple fire detector by Arduino #
 
-This branch is a development branch. If you want the stable branch, check the stale branch.
+~~This branch is a development branch. If you want the stable branch, check the stale branch.~~
+This project is currently ABANDONED and will only live as a hobby project as it has lost it's original intention.
+Only updates on SPs / bug fixes will be pushed. No new features will be added.
 
 ## Current status ##
 	✔ Temperature check
