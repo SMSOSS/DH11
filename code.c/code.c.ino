@@ -8,7 +8,6 @@
 #include <firestat.h>
 
 #define dht_apin   11 // define pin node
-#define buzzerPin   8  // define buzzer pin
 #define flamePin    12  // define flame sensor pin
 #define debugMode   0  // define debug mode
 dht DHT;  // sensor pin S to pin11
