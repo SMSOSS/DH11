@@ -4,6 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* rain2wood@SMSOSS, import custom fireStat lib */
+#include <firestat.h>
+
 #define dht_apin   11 // define pin node
 #define buzzerPin   8  // define buzzer pin
 #define flamePin    12  // define flame sensor pin
