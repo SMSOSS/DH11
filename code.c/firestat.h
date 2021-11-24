@@ -14,4 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* label isFire to be an external int */
+extern int isFire;
+
 #endif /*_NOFIRE_FIRESTAT_H*/
