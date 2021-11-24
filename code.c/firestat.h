@@ -14,7 +14,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* label isFire to be an external int */
+/* PIN definitions and debugMode */
+#define dht_apin 11
+#define flamePin 12
+#define debugMode 0
+
+/* external int defs */
 extern int isFire;
+extern int temp;
+extern int flame;
 
 #endif /*_NOFIRE_FIRESTAT_H*/

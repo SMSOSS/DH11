@@ -7,9 +7,6 @@
 /* rain2wood@SMSOSS, import custom fireStat lib */
 #include "firestat.h"
 
-#define dht_apin   11 // define pin node
-#define flamePin    12  // define flame sensor pin
-#define debugMode   0  // define debug mode
 dht DHT;  // sensor pin S to pin11
 
 int temp = 65536; // initialize temperature value to zero
