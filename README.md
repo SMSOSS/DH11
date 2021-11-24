@@ -22,6 +22,4 @@ This branch is a development branch. If you want the stable branch, check the st
 ## Notes ##
 Import The ZIP into Arduino libraries as `dht.h` relies on it.
 
-`smokeThres` can (and should) be finetuned as we are not 100% keen on the sensor's sensitivity yet.
-
-You can hook this code with other sensors (e.g. Buzzer, lights) to perform actions once a fire is being detected by the sensors. Use this by `extern int isFire`. Default value should be `0` and the value when fire is being detected is `1`. 
+You can hook this code with other sensors (e.g. Buzzer, lights) to perform actions once a fire is being detected by the sensors. Use this by including the firestat header (`firestat.h`). Default value should be `0` and the value when fire is being detected is `1`. 
