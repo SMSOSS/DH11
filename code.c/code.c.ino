@@ -15,6 +15,9 @@ int isFire = 0;
     	
 void setup() {
   Serial.begin(9600); // label 9600 baud
+  analogRead(flamePin);
+  Serial.println("[INFO] Device warming up");
+  delay(60000);
 }
 
 void loop() {
