@@ -19,15 +19,16 @@ void setup() {
 
 void loop() {
   DHT.read11(dht_apin);
-  flame = digitalRead(flamePin);
+//  flame = digitalRead(flamePin);
   // device hasn't been set up yet
   if (temp == 65536){
     Serial.println("[INFO] Initializing values");
     temp = DHT.temperature;
-   } // finish device setup
+    flame = analogRead(flamePin); 
+  } // finish device setup
 
   // real bug trigger
-  if (DHT.temperature > (temp + 3) && flame != 1){
+  if (DHT.temperature > (temp + 3) && (analogRead(flamePin) < (flame + 3){
     Serial.println("[WARN] Potential fire detected");
     Serial.print("Current temperature: ");
     Serial.println(DHT.temperature);
@@ -38,6 +39,7 @@ void loop() {
   else if (DHT.temperature < temp) { // val update
     Serial.println("[INFO] Updating stored values");
     temp = DHT.temperature;
+    flame = analogRead(flamePin);
     isFire = 0;
     if (debugMode == 1) {
         Serial.print("[DEBUG] Current temperature value: ");
@@ -49,6 +51,7 @@ void loop() {
   else {
     Serial.println("[INFO] All stable"); // val update
     temp = DHT.temperature;
+    flame = analogRead(flamePin);
     if (debugMode == 1) {
         Serial.print("[DEBUG] Current temperature value: ");
         Serial.println(temp);
