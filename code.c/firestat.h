@@ -16,7 +16,7 @@
 
 /* PIN definitions and debugMode */
 #define dht_apin 11
-#define flamePin 12
+#define flamePin 2
 #define debugMode 0
 
 /* external int defs */
