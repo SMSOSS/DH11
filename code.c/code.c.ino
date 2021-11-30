@@ -31,7 +31,7 @@ void loop() {
   } // finish device setup
 
   // real bug trigger
-  if (DHT.temperature > (temp + 3) || (analogRead(flamePin) <= 350 ){
+  if ((DHT.temperature > (temp + 3) || (analogRead(flamePin) <= 350)){
     Serial.println("[WARN] Potential fire detected");
     Serial.print("Current temperature: ");
     Serial.println(DHT.temperature);
